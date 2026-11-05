@@ -1,0 +1,86 @@
+:root {
+  --bg: #0b0d17;
+  --panel: #151a2e;
+  --text: #e8eaf6;
+  --muted: #9aa0c3;
+  --accent: #7c5cff;
+  --accent-2: #22d3ee;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo { font-weight: 800; font-size: 1.3rem; color: var(--text); text-decoration: none; }
+.logo span { color: var(--accent); margin-left: 2px; }
+
+nav a { color: var(--muted); text-decoration: none; margin-left: 1.25rem; }
+nav a:hover { color: var(--text); }
+
+main { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+
+.hero { text-align: center; padding: 5rem 0 4rem; }
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.15;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero p { color: var(--muted); max-width: 560px; margin: 1.25rem auto 2rem; font-size: 1.1rem; }
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.15); }
+
+.mesaj { color: var(--accent-2) !important; font-weight: 600; }
+
+.ozellikler {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+.ozellikler article { background: var(--panel); padding: 1.5rem; border-radius: 14px; }
+.ozellikler h2 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.ozellikler p { color: var(--muted); }
+
+.iletisim { text-align: center; padding-bottom: 4rem; }
+.iletisim h2 { margin-bottom: 1rem; }
+.iletisim form { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+.iletisim input {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #2a3150;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 1rem;
+  min-width: 0;
+  flex: 1 1 240px;
+  max-width: 320px;
+}
+
+footer { text-align: center; color: var(--muted); padding: 2rem 1rem; border-top: 1px solid #1f2540; }
